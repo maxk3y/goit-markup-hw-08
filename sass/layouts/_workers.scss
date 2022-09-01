@@ -1,0 +1,71 @@
+.workers {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: #f5f4fa;
+}
+.workers__list {
+  display: flex;
+  column-gap: 30px;
+  > li {
+    background-color: #fff;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.workers-info-center {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.workers__name {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--second-color);
+}
+
+.workers__role {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--third-color);
+  margin-bottom: 16px;
+}
+
+.workers__icons {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.workers-icon-link {
+  @extend %align-list;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  fill: var(--ico-color);
+  &:hover,
+  &:focus {
+    background-color: var(--first-color);
+    fill: #ffffff;
+  }
+}
+
+/* .workers-soc-link:hover, 
+.workers-soc-link:focus {
+  background-color: var(--first-color);
+}
+
+.workers-soc-link:hover .workers-soc-icon, 
+.workers-soc-link:focus .workers-soc-icon {
+  fill: white;
+} */
