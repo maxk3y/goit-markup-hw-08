@@ -1,5 +1,6 @@
 @import './utils/vars';
 @import './base/reset';
+@import './utils/mixins';
 @import './base/common';
 @import './utils/hidden';
 @import './components/container';
@@ -9,13 +10,9 @@
 
 @import './layouts/header';
 @import './layouts/hero';
-@import './layouts/hero__title';
-@import './layouts/hero__title__btn';
 @import './layouts/features';
 @import './layouts/ocupation';
 @import './layouts/workers';
 @import './layouts/clients';
 @import './layouts/footer';
 @import './layouts/portfolio';
-@import './layouts/portfolio-btns';
-@import './layouts/portfolio-list';

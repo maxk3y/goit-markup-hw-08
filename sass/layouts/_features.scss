@@ -1,21 +1,61 @@
 .features {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .features__list {
   display: flex;
-  column-gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  @include mobile {
+  }
+
+  @include tablet {
+  }
+
+  @include desktop {
+  }
+}
+
+.features__item-wrap {
+  display: flex;
+  flex-direction: column;
+  @include mobile {
+  }
+
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @include desktop {
+    width: 270px;
+  }
 }
 
 .features__item {
   @extend %align-list;
   justify-content: center;
-  width: 270px;
+  width: 290px;
   height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
   margin-bottom: 30px;
+  @include mobile {
+    width: 450px;
+  }
+
+  @include tablet {
+    width: 100%;
+  }
+
+  @include desktop {
+    width: 270px;
+  }
 }
 
 .features__title {
@@ -25,12 +65,34 @@
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
   color: var(--second-color);
+  @include mobile {
+    text-align: unset;
+  }
+
+  @include tablet {
+  }
+
+  @include desktop {
+  }
 }
+
 .features__description {
-  max-width: 270px;
+  width: 290px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--third-color);
+  @include mobile {
+    width: 450px;
+  }
+
+  @include tablet {
+    width: 100%;
+  }
+
+  @include desktop {
+    width: 270px;
+  }
 }

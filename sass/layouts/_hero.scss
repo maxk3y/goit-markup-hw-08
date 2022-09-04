@@ -1,17 +1,125 @@
 main {
-  padding-top: 80px;
+  margin-top: 65px;
+  @include tablet {
+  }
+  @include desktop {
+    margin-top: 0;
+    padding-top: 80px;
+  }
 }
 
 .hero {
   background-color: #2f303a;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/main-bg.jpg);
+    url(../images/hero-bg-mob-1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin: 0 auto;
-  max-width: 1600px;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  @include retina {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-bg-mob-2x.jpg);
+  }
+
+  @include mobile {
+    padding-top: 118px;
+    padding-bottom: 118px;
+    max-width: 480px;
+  }
+
+  @include tablet {
+    padding-top: 118px;
+    padding-bottom: 118px;
+    max-width: 768px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-bg-tab-1x.jpg);
+    @include retina {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bg-tab-2x.jpg);
+    }
+  }
+
+  @include desktop {
+    padding-top: 118px;
+    padding-bottom: 118px;
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    line-height: 1.36px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-bg-desk-1x.jpg);
+    @include retina {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bg-desk-2x.jpg);
+    }
+  }
 }
 
+.hero__title {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 30px;
+  max-width: 300px;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+  @include mobile {
+    font-size: 26px;
+    line-height: 1.62;
+    max-width: 360px;
+  }
+
+  @include tablet {
+    font-size: 26px;
+    line-height: 1.62;
+    max-width: 360px;
+  }
+
+  @include desktop {
+    font-size: 44px;
+    line-height: 1.36;
+    max-width: 700px;
+  }
+}
+
+.hero__title__btn {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: transparent;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--first-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  // font-size: 16px;
+  // line-height: 1.88;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  min-width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  cursor: pointer;
+  transition-property: color, box-shadow, background-color, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+  @include mobile {
+  }
+
+  @include tablet {
+  }
+
+  @include desktop {
+  }
+}

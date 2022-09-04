@@ -1,4 +1,221 @@
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.portfolio__buttons {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 40px;
+  @include tablet {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @include desktop {
+    margin-bottom: 50px;
+  }
+}
+
+.portfolio-button {
+  button {
+    border: transparent;
+    padding: 6px 24px;
+    border-radius: 4px;
+    background-color: #f5f4fa;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+    color: var(--second-color);
+    cursor: pointer;
+    transition-property: color, box-shadow, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: #ffffff;
+      background-color: var(--first-color);
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+  }
+}
+
+.portfolio__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 0 auto;
+  > li {
+    border: 1px solid #eeeeee;
+    min-width: 290px;
+    max-height: 404px;
+    @include mobile {
+      min-width: 450px;
+      max-width: 450px;
+      max-height: 404px;
+    }
+    @include tablet {
+      min-width: 354px;
+      min-height: 404px;
+      max-height: 440px;
+    }
+    @include desktop {
+      min-width: 370px;
+      min-height: 404px;
+      max-height: 440px;
+    }
+  }
+  @include tablet {
+    justify-content: flex-start;
+  }
+  @include desktop {
+    justify-content: center;
+  }
+}
+
+.portfolio__item {
+  a {
+    text-decoration: none;
+    width: 100%;
+    max-height: 100%;
+    @include mobile {
+      max-width: 450px;
+      min-height: 404px;
+      max-height: 440px;
+    }
+    @include tablet {
+      width: 354px;
+      min-height: 404px;
+      max-height: 440px;
+    }
+  }
+  &:hover,
+  &:focus {
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+  @include tablet {
+    width: 354px;
+    max-height: 440px;
+  }
+}
+
+.portfolio-item-title {
+  @extend %align-list;
+  justify-content: flex-start;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--second-color);
+  @include mobile {
+    font-size: 18px;
+  }
+}
+
+.portfolio-item-description {
+  display: flex;
+  font-size: 14px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: var(--third-color);
+
+  @include mobile {
+    font-size: 16px;
+  }
+  @include tablet {
+  }
+}
+
+.overlay-box {
+  position: relative;
+  overflow: hidden;
+  > img {
+    height: 294px;
+    @include desktop {
+      width: 100%;
+      max-height: 294px;
+    }
+  }
+
+  @include tablet {
+    max-width: 354px;
+    max-height: 294px;
+  }
+  @include desktop {
+    max-width: 370px;
+    max-height: 294px;
+  }
+}
+
+.portfolio__overlay {
+  padding: 0 24px;
+  @extend %align-list;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(33, 150, 243, 0.9);
+  .portfolio__item:hover & {
+    transform: translateY(0);
+  }
+}
+
+.overlay__content {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  @include mobile {
+    font-size: 18px;
+  }
+
+  @include desktop {
+  }
+}
+
+.img-description-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  @include mobile {
+    min-height: 110px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 24px;
+    padding-bottom: 20px;
+  }
+  @include tablet {
+    min-height: 110px;
+    max-height: 146px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+  }
+  @include desktop {
+  }
 }

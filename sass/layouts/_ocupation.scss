@@ -1,5 +1,15 @@
 .occupation {
+  display: none;
   padding-bottom: 94px;
+  @include mobile {
+
+  }
+  @include tablet {
+    
+  }
+  @include desktop {
+    display: block;
+  }
 }
 
 .occupation__list {

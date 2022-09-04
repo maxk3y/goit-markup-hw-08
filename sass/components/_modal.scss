@@ -9,8 +9,9 @@
 
 .modal {
   position: absolute;
-  width: 528px;
-  height: 581px;
+  z-index: 3;
+  width: calc(100% - 15px);
+  height: 609px;
   background-color: #ffffff;
   border-radius: 10px;
   top: 50%;
@@ -21,6 +22,14 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0);
+  }
+  @include mobile {
+    width: 450px;
+  }
+
+  @include desktop {
+    width: 528px;
+    height: 581px;
   }
 }
 
@@ -118,7 +127,6 @@
 }
 
 .input-title {
-  font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
@@ -126,12 +134,19 @@
 }
 
 .check-text {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 11px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: #757575;
   @extend %align-list;
+  @include mobile {
+    font-size: 12px;
+  }
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 
 .check-text span {
@@ -146,6 +161,8 @@
   transition-property: background-color, border, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @include mobile {
+  }
 }
 
 .policy-link {
