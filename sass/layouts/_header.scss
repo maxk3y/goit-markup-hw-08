@@ -181,20 +181,27 @@
   align-content: center;
   justify-content: flex-start;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.22px;
   letter-spacing: 0.02em;
   a {
     color: var(--first-color);
   }
+  @include mobile {
+    font-size: 18px;
+  }
 }
 
 .mob-soc__list-item {
   &:not(:last-child)::after {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
     content: '';
     border-right: 1px solid rgba(33, 33, 33, 0.2);
+    @include mobile {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
   }
 }
 .mob-soc__link {
