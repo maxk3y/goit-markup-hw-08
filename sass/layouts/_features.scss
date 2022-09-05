@@ -68,10 +68,11 @@
   text-align: center;
   color: var(--second-color);
   @include mobile {
-    text-align: unset;
+  
   }
 
   @include tablet {
+    text-align: unset;
   }
 
   @include desktop {

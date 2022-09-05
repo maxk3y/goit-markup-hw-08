@@ -414,7 +414,7 @@ background-position: center;
   background-color: #ffffff;
   padding-top: 16px;
   padding-bottom: 16px;
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
   position: fixed;
   top: 0;
   z-index: 1;
@@ -871,7 +871,7 @@ main {
   text-align: center;
   color: var(--second-color);
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .features__title {
     text-align: unset;
   }
@@ -1074,14 +1074,14 @@ main {
 }
 @media screen and (min-width: 768px) {
   .clients__item {
-    max-width: calc((100% - 90px) / 3);
+    width: 226px;
   }
 }
 @media screen and (min-width: 1200px) {
   .clients__item {
     font-size: 36px;
     line-height: 1.17;
-    max-width: calc((100% - 180px) / 6);
+    width: 170px;
   }
 }
 

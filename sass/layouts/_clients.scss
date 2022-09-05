@@ -46,13 +46,13 @@
   }
 
   @include tablet {
-    max-width: calc((100% - 90px) / 3);
+    width: 226px;
   }
 
   @include desktop {
     font-size: 36px;
     line-height: 1.17;
-    max-width: calc((100% - 180px) / 6);
+    width: 170px;
   }
 }
 
