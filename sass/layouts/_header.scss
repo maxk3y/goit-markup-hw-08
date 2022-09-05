@@ -134,10 +134,13 @@
   gap: 32px;
   a {
     font-weight: 500;
-    font-size: 40px;
-    line-height: 47px;
+    font-size: 30px;
+    line-height: 1.18;
     letter-spacing: 0.02em;
     color: var(--second-color);
+    @include mobile {
+      font-size: 40px;
+    }
   }
   & a:hover,
   & a:focus {
@@ -162,10 +165,13 @@
 
 .mob-menu-connect__tel {
   font-weight: 500;
-  font-size: 34px;
+  font-size: 27px;
   line-height: 1.18;
   letter-spacing: 0.02em;
   color: var(--first-color);
+  @include mobile {
+      font-size: 34px;
+    }
 }
 
 .mob-menu-connect__mail {
